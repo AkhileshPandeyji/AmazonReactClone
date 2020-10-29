@@ -1,0 +1,217 @@
+$primary-color:black;
+$secondary-color:aliceblue;
+$location-upper:#CCCCCC;
+
+.navbar {
+    background-color: $primary-color;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 2px 2px 2px 2px;
+    display: flex;
+    align-items: center;
+
+    &-logo {
+        width: 128.733px;
+        height: 50px;
+        padding: 4px 0px;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: calc(100% - 25px);
+            height: calc(100% - 12px);
+            margin: auto 6px;
+        }
+
+        span {
+            color: white;
+            position: absolute;
+            top: 12px;
+            left: calc(100% - 18px);
+        }
+
+        &:hover {
+            border: 1px white solid;
+            border-radius: 2%;
+        }
+    }
+
+    &-location {
+        // 156.3×50
+        width: 156.3px;
+        height: 50px;
+        margin-left: 2px;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+
+        &-container {
+            margin: auto;
+
+            .navbar-location-upper {
+                color: $location-upper;
+                font-size: 12px;
+                line-height: 14px;
+                height: 14px;
+                font-weight: 400;
+                font-family: "Amazon Ember", Arial, sans-serif;
+            }
+
+            .navbar-location-lower {
+                color: white;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        &:hover {
+            border: 1px white solid;
+            border-radius: 2%;
+        }
+    }
+
+    &-search-form {
+        // 432.083×60
+        width: 833.683px;
+        height: 40px;
+        margin-left: 2px;
+        cursor: pointer;
+        // background-color: white;
+        border-radius: 2px;
+        text-align: center;
+
+        form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .navbar-search-selection {
+                width: 8%;
+                height: 100%;
+
+                select {
+                    width: 100%;
+                    height: 100%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: none;
+                    border-radius: 2px;
+                    background-color: #dfdfdf;
+                    padding: 10% 20%;
+                }
+            }
+
+            .navbar-search-input {
+                width: 84%;
+                height: 100%;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-left: 10px;
+                }
+            }
+
+            .navbar-search-btn {
+                width: 8%;
+                height: 100%;
+
+                button {
+                    background-color: #F3A847;
+                    border: none;
+                    border-radius: 2px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &-lang {
+        width: 156.3px;
+        height: 50px;
+        margin-left: 2px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+
+        // background-color: $secondary-color;
+        &:hover {
+            border: 1px white solid;
+            border-radius: 2%;
+        }
+    }
+
+    &-orders {
+        width: 156.3px;
+        height: 50px;
+        margin-left: 2px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px white solid;
+            border-radius: 2%;
+        }
+
+        // background-color: $secondary-color;
+    }
+
+    &-cart {
+        width: 56.3px;
+        height: 50px;
+        margin-left: 2px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+
+        img {
+            margin-top: 5px;
+        }
+
+        &:hover {
+            border: 1px white solid;
+            border-radius: 2%;
+        }
+
+        // background-color: $secondary-color;
+    }
+
+    &-country {
+        width: 111px;
+        height: 50px;
+        margin-left: 2px;
+        padding: 2px;
+
+        select {
+            margin: 5px;
+            width: 60%;
+            height: 80%;
+            margin-left: 17px
+        }
+    }
+}
+
+.cart-value {
+    position: absolute;
+    z-index: 1;
+    top: -3px;
+    left: 25px;
+    color: #D0903D;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: arial
+}
