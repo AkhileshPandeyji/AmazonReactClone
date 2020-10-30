@@ -1,8 +1,9 @@
 import React from 'react';
 import amazonLogo from '../images/amazonLogo.png';
 import { useState } from 'react';
-import search from '../images/loupe.svg'
-import cart  from '../images/cart.png'
+import search from '../images/loupe.svg';
+import cart  from '../images/cart.png';
+import menuIcon from '../images/menu.png';
 
 const Navbar = () => {
     const [inputVal,changeInput] = useState({text:""});
@@ -19,6 +20,7 @@ const Navbar = () => {
     }
     return ( 
     <div className="navbar">
+        <div className="navbar-menu"><img src={menuIcon} alt="menu"></img></div>
         <div className="navbar-logo"><img src={amazonLogo} alt="logo"></img><span>.in</span></div>
         <div className="navbar-location">
             <div className="navbar-location-container">

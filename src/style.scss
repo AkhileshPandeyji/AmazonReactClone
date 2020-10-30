@@ -8,5 +8,11 @@ body{
     margin:0px;
 }
 
+.app{
+    position: relative;
+}
+
 @import "./styles/navbar";
+@import "./styles/navbar2";
+@import "./styles/home";
 
