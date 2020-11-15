@@ -4,16 +4,60 @@
     z-index: 0;
     top: 97px;
     padding: 20px;
-    width: calc( 100% - 20px );
-    height: calc( 100% - 100px );
-    .product-dashboard{
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
+    width: 100%;
+    height: max-content;
+    padding-top: 300px;
+    background: #EAEDED;
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2020/X-site/SingleTitle/Chhalaang/postDiwali/1500x600_Hero-Tall_np._CB417284844_.jpg");
+    background-repeat: no-repeat;
 
+    .home-deals{
+        height:470px;
+        width: 100%;
+        box-shadow: 0px 0px 4px rgb(197, 191, 191);
+        background: white;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 40px;
+        padding-top: 1px;
+        &-title{
+            height: max-content;
+            width: 100%;
+            padding-left: 20px;
+            h1{
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+                vertical-align: middle;
+            }
+        }
+        &-products{
+            height: max-content;
+            width:100%;
+        }
+    }
+    .home-user{
+        height:470px;
+        width: 100%;
+        box-shadow: 0px 0px 4px rgb(197, 191, 191);
+        background: white;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 1px;
+        &-title{
+            height: max-content;
+            width: 100%;
+            padding-left: 20px;
+            h1{
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+        &-products{
+            height: max-content;
+            width:100%;
+        }
+    }
+
+}

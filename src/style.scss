@@ -1,3 +1,6 @@
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";
+
 $link-color:#0066c0;
 $btn-color:#EFBF45;
 
@@ -6,9 +9,11 @@ $btn-color:#EFBF45;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 body{
     padding:0px;
     margin:0px;
+    background: #EAEDED;
 }
 
 .app{

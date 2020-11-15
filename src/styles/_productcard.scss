@@ -1,8 +1,9 @@
 .product-card{
-    width:18%;
+    width:80%;
     height:370px;
-    margin:10px;
-    float: left;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0px 0px 4px 2px #cecbcb;
     padding: 10px 8px;
     
@@ -17,11 +18,11 @@
    margin-bottom: 10px;
    height: 60%;
    text-align: center;
-//    padding: 4px;
 }
 .product-image img{
     height: 100%;
     width: 95%;
+    margin: auto;
 }
 
 .product-price{
