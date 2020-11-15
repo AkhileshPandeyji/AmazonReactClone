@@ -1,6 +1,9 @@
+$link-color:#0066c0;
+$btn-color:#EFBF45;
 
 *{
     box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -12,7 +15,20 @@ body{
     position: relative;
 }
 
+a{
+    color:$link-color;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.red{
+    color:rgb(190, 30, 30);
+    font-size: small;
+}
+
 @import "./styles/navbar";
 @import "./styles/navbar2";
 @import "./styles/home";
+@import "./styles/productcard";
 
