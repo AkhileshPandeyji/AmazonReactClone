@@ -4,24 +4,24 @@ import Slick from 'react-slick';
 import { PrevArrow,NextArrow } from './Utility'
 
 const dealProducts = [
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 }
+    {id:1, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:2, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:3, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:4, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:5, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:6, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:7, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:8, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 }
 ]
 const userProducts = [
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
-    { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:9, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:10, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:11, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:12, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:13, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:14, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:15, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
+    {id:16, name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est?", price: 4500, img: "https://picsum.photos/id/0/200/300", rating: 4.0 },
 ]
 
 
@@ -48,7 +48,7 @@ const Home = () => {
                     {
                         deal_products.map((product) => {
                             return (
-                                <ProductCard name={product.name} img={product.img} price={product.price} rating={product.rating} />
+                                <ProductCard id={product.id} name={product.name} img={product.img} price={product.price} rating={product.rating} />
                             )
                         })
                     }
@@ -63,7 +63,7 @@ const Home = () => {
                     <Slick {...settings} >
                     {
                         user_products.map((product) => {
-                            return (<ProductCard name={product.name} img={product.img} price={product.price} rating={product.rating} />)
+                            return (<ProductCard id={product.id} name={product.name} img={product.img} price={product.price} rating={product.rating} />)
                         })
                     }
                     </Slick>                    

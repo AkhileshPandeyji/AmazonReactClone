@@ -1,0 +1,98 @@
+.login{
+    height:100vh;
+    width:100%;
+    background: white;
+    padding-top: 20px;
+    &-logo{
+        text-align: center;        
+        img{
+            height: 40px;
+            width: 120px;
+        }
+        margin: auto;
+    }
+    &-container{
+        height:max-content;
+        width: 370px;
+        margin: auto;
+        border:1px solid #E1E4E9;
+        border-radius: 5px;    
+        padding:20px 25px;    
+        label{
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 700;
+            
+        }
+        input{
+            width:97%;
+            height:37px;
+            margin-top:10px;
+            border:1px solid #E1E4E9;
+            border-radius:5px;
+            padding-left: 20px;
+        }
+        button.login-submit{
+            width: 97%;
+            height: 37px;
+            background: #F0C559;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top:10px;
+        }
+    }
+    h1{
+        font-size:28px;
+        line-height:28px;
+        font-weight: 400;
+    }
+    &-form-terms{
+        p{
+            margin: auto;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+    }
+    &-signup{
+        width: 600px;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 13px;
+            line-height: 14px;
+            color:rgb(167, 153, 153);
+        }
+        
+        hr{
+            width: 125px;
+            height: 2px;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #E1E4E9;
+            opacity: 0.5;
+        }
+    }
+    .login-submit{
+        width: 370px;
+        height: 37px;
+        background: #F0C559;
+        margin-top: 10px;
+        border: none;
+        border-radius: 3px;
+        margin: auto;
+        margin-top:10px;
+    }
+    .final-submit{
+        text-align: center;
+    }
+}
+
+.gray{
+    background: #cbcbce !important;
+}

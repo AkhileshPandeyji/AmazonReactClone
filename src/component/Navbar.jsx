@@ -4,9 +4,12 @@ import { useState } from 'react';
 import search from '../images/loupe.svg';
 import cart  from '../images/cart.png';
 import menuIcon from '../images/menu.png';
+import MainMenu from './MainMenu';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
     const [inputVal,changeInput] = useState({text:""});
+    const [menuVisible,toggleMenu] = useState({visible:false});
     const handleChange = (e)=>{
         let target = e.target;
         let value = target.value;
@@ -18,10 +21,24 @@ const Navbar = () => {
         e.preventDefault();
         console.log("searched..");
     }
+    const showMenu = (e)=>{
+        // e.preventDefault();
+        const mainMenu = document.querySelector(".main-menu");
+        // console.log(mainMenu);
+        toggleMenu({visible:!menuVisible.visible});
+        // console.log(menuVisible);
+        let vis = menuVisible.visible ? "visible":"hidden";
+        mainMenu.style.visibility = vis;
+        console.log(vis);
+    }
+    const returnToHome = (e) => {
+        props.history.push("/");
+    }
     return ( 
     <div className="navbar">
-        <div className="navbar-menu"><img src={menuIcon} alt="menu"></img></div>
-        <div className="navbar-logo"><img src={amazonLogo} alt="logo"></img><span>.in</span></div>
+        <div className="navbar-menu" onClick={showMenu}><img src={menuIcon} alt="menu"></img></div>
+        <MainMenu />
+        <div className="navbar-logo" onClick={returnToHome}><img src={amazonLogo} alt="logo"></img><span>.in</span></div>
         <div className="navbar-location">
             <div className="navbar-location-container">
                 <div className="navbar-location-upper">Deliver To Akhilesh</div>
