@@ -7,6 +7,7 @@ import Help from "./component/Help";
 import LandingPage from "./component/LandingPage";
 import SignUp from "./component/SignUp";
 import ProductDisplay from "./component/ProductDisplay";
+import MyCart from "./component/MyCart";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/signUp" component={SignUp} />
         <Route path="/help" component={Help} />
         <Route path="/product/:product_id" component={ProductDisplay} />
+        <Route path="/myCart" component={MyCart} />
         <Route path="/" component={LandingPage} />        
       </Switch>
     </BrowserRouter>    

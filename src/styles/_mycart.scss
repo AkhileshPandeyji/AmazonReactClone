@@ -1,0 +1,101 @@
+$primary-color:#EFBF45;
+$secondary-color:#dad8d3;
+
+.mycart-home{
+    position: absolute;
+    top:97px;
+    width: 100%;
+    height:max-content;
+    background:#dfdfdf;
+    padding: 10px 15px;
+    .mycart-banner{
+        width:100%;
+        height:150px;
+        background: white;
+        border-radius: 5px;
+        padding-left:20px;
+        h1{
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+            padding-top: 24px;
+        }
+    }
+    .mycart-items{
+        width:100%;
+        height:max-content;
+        padding-bottom: 40px;
+        background: white;
+        border-radius: 5px;
+        padding-left:20px;
+        padding-right:20px;
+        h1{
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+            padding-top: 24px;
+        }
+    }
+}
+
+.mycart-item{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    // margin-left: auto;
+    // margin-right: auto;
+    box-shadow: 4px 4px 8px 2px #c9c5c5;
+    padding: 10px 10px;
+    width: 100%;
+    &-img{
+        display: flex;
+        margin-bottom: 10px;
+        // align-items: center;
+
+        img{
+            width:120px;
+            height:100px;
+        }
+    }
+    &-details{
+        margin-left: 30px;
+        h1{
+            margin-top: -30px;
+            margin-bottom: 5px;            
+        }
+        p{
+            margin-bottom: 5px;
+        }
+        button{
+            border:none;
+            border-radius: 4px;
+            background: $secondary-color;
+            height:30px;
+            width: 70px;
+        }
+    }
+    h1{
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+.mycart-total{
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 40%;
+    padding: 0px 20px;
+    height: 60px;
+    i{
+        color:red;
+    }
+}
+.mycart-checkout{
+    width: 200px;
+    height:max-content;
+    background:$primary-color;
+    border:none;
+    border-radius:3px;
+    margin-left:30%;
+    margin-top: 40px;
+    padding: 20px;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import amazonLoginLogo from '../images/amazonLoginLogo.png'
 import TwoButton from './TwoButton';
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -74,7 +75,9 @@ const Login = () => {
                 <hr />
             </div>
             <div className="final-submit">
+                <Link to="/signUp">
                 <button className="login-submit gray">Create Your Amazon Account</button>
+                </Link>
             </div>            
         </div>
     );
