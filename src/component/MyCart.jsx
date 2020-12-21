@@ -2,14 +2,8 @@ import React, { Profiler, useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Navbar2 from './Navbar2';
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const mycartItems = [
-    {id:1,name:"Apple Iphone 6s",price:"50000",img:"https://picsum.photos/id/0/200/300"},
-    {id:2,name:"Apple Iphone 12",price:"50000",img:"https://picsum.photos/id/0/200/300"},
-    {id:3,name:"Apple Iphone 12",price:"50000",img:"https://picsum.photos/id/0/200/300"},
-    {id:4,name:"Apple Iphone 12",price:"50000",img:"https://picsum.photos/id/0/200/300"},
-    {id:5,name:"Apple Iphone 12",price:"50000",img:"https://picsum.photos/id/0/200/300"}
-]
 
 const MyCartBanner = () => {
     return (
@@ -41,13 +35,12 @@ const MyCartItem = (props)=>{
 const MyCart = (props) => {
 
     const [isEmpty, toggleEmpty] = useState({ isEmpty: false });
-    const [prodList,changeProdList] = useState(mycartItems);
+    const prodList = props.myCart;    
     const [total,changeTotal] = useState(0);
     const deleteProd = (id,e)=>{
-        console.log(id);
-        let newProdList = prodList.filter((prod) => { return prod.id != id;});
-        changeProdList(newProdList);
+        props.deleteProduct(id);
     }
+    
     const calculateSum = (prods)=>{
         let val = 0;
         prods.map((prod) => {
@@ -88,4 +81,18 @@ const MyCart = (props) => {
     );
 }
 
-export default MyCart;
+const mapStateToProps = (state) =>{
+    return {
+        myCart:state.myCart
+    };
+}
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        deleteProduct:(id)=>{
+            dispatch({type:"REMOVE_CART",id:id});
+        }
+    }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(MyCart);

@@ -6,11 +6,37 @@ import cart from '../images/cart.png';
 import menuIcon from '../images/menu.png';
 import MainMenu from './MainMenu';
 import { Link } from 'react-router-dom';
-
+import { cartValueContext } from '../contexts/cartValueContext';
+import { useContext } from 'react';
+import india from "../images/india.png";
+import russia from "../images/russia.png";
+import us from "../images/united-states.png";
+import uk from "../images/united-kingdom.png";
+import china from "../images/china.png";
+import Select from "react-select";
+import { connect } from "react-redux";
 
 const Navbar = (props) => {
+    console.log(india);
     const [inputVal, changeInput] = useState({ text: "" });
     const [menuVisible, toggleMenu] = useState({ visible: false });
+    const { value,addOne,deleteOne } = useContext(cartValueContext);
+    const [selectedOption,changeSelectedOption] = useState({selectedOption:{value:"india",label:<div><img src={india} alt="india-flag" style={{height:40,width:40}}/></div>}});
+
+
+    const options = [
+        {value:"india",label:<div><img src={india} alt="india-flag" style={{height:32,width:32}}/></div>},
+        {value:"us",label:<div><img src={us} alt="us-flag" style={{height:32,width:32}} /></div>},
+        {value:"uk",label:<div><img src={uk} alt="uk-flag" style={{height:32,width:32}} /></div>},
+        {value:"russia",label:<div><img src={russia} alt="russia-flag" style={{height:32,width:32}} /></div>},
+        {value:"china",label:<div><img src={china} alt="china-flag" style={{height:32,width:32}} /></div>}
+    ]
+    const customStyles = {
+        padding:5,
+        background:"black",
+        textAlign:"center"
+    }
+
     const handleChange = (e) => {
         let target = e.target;
         let value = target.value;
@@ -35,6 +61,12 @@ const Navbar = (props) => {
     const returnToHome = (e) => {
         props.history.push("/");
     }
+
+    const changedSelectedValue = (changedOption) =>{
+        changeSelectedOption({selectedOption:changedOption});
+        console.log(changedOption);
+    }
+
     return (
         <div className="navbar">
             <div className="navbar-menu" onClick={showMenu}><img src={menuIcon} alt="menu"></img></div>
@@ -62,10 +94,7 @@ const Navbar = (props) => {
                 </form>
             </div>
             <div className="navbar-country">
-                <select>
-                    <option value="India">India</option>
-                    <option value="US">US</option>
-                </select>
+                <Select value={selectedOption.selectedOption} onChange={changedSelectedValue} options={options} styles={customStyles.select} />
             </div>
             <div className="navbar-lang">
                 <div className="navbar-location-container">
@@ -81,7 +110,7 @@ const Navbar = (props) => {
             </div>
             <Link to="/myCart">
                 <div className="navbar-cart">
-                    <span className="cart-value">0</span>
+                    <span className="cart-value">{props.myCart.length}</span>
                     <img src={cart} alt="cart"></img>
                 </div>
             </Link>
@@ -89,4 +118,10 @@ const Navbar = (props) => {
     );
 }
 
-export default Navbar;
+const mapStateToProps = (state)=>{
+    return{
+        myCart:state.myCart
+    };
+}
+
+export default connect(mapStateToProps,null)(Navbar);
